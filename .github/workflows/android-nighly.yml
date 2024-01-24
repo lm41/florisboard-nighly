@@ -13,7 +13,8 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         with:
-          repository: 'florisboard/florisboard'
+          repository: 'lm41/florisboard'
+          rev: "various-changes"
           submodules: recursive
 
       - uses: gradle/wrapper-validation-action@v1
