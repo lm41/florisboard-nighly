@@ -31,7 +31,7 @@ jobs:
         # See https://github.com/google/play-services-plugins/issues/199
         run: ./gradlew clean && ./gradlew assembleBeta
       - name: Look for the apk
-        run: ls build/outputs && app/build/outputs
+        run: ls app/build/outputs
       - uses: actions/upload-artifact@v3
         with:
           name: app-nightly.apk
