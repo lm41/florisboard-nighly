@@ -29,7 +29,7 @@ jobs:
       - name: Build with Gradle
         # MUST call gradlew separately because of an OSS license plugin issue.
         # See https://github.com/google/play-services-plugins/issues/199
-        run: ./gradlew clean && ./gradlew assembleBeta && mv app/build/outputs/apk/beta/app-beta.apk app/build/outputs/apk/beta/app-nightly.apk
+        run: ./gradlew clean && ./gradlew assembleBeta && mv app/beta/app-beta.apk app/beta/app-nightly.apk
       - uses: actions/upload-artifact@v3
         with:
           name: app-nightly.apk
