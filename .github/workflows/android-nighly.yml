@@ -33,7 +33,7 @@ jobs:
       - uses: actions/upload-artifact@v3
         with:
           name: app-nightly.apk
-          path: app/build/outputs/apk/beta/app-nightly.apk
+          path: app/beta/app-nightly.apk
       - uses: marvinpinto/action-automatic-releases@latest
         with:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
@@ -41,4 +41,4 @@ jobs:
           prerelease: true
           title: "Nightly Build"
           files: |
-            app/build/outputs/apk/beta/app-beta.apk
+            app/beta/app-beta.apk
