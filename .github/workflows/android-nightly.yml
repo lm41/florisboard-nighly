@@ -31,11 +31,11 @@ jobs:
         # See https://github.com/google/play-services-plugins/issues/199
         run: ./gradlew clean && ./gradlew assembleBeta
       - name: Look for the apk
-        run: ls app/build/outputs
+        run: tree app
       - uses: actions/upload-artifact@v3
         with:
-          name: app-nightly.apk
-          path: app/beta/app-nightly.apk
+          name: app-beta.apk
+          path: app/beta/app-beta.apk
       - uses: marvinpinto/action-automatic-releases@latest
         with:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
